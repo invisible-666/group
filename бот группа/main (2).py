@@ -16,7 +16,7 @@ bot = TeleBot(TOKEN)
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
     bot.reply_to(message, """\
-привет напиши одну из этих комманд
+Привет, напиши одну из этих комманд
 /joke, /info\
 """)
 
@@ -24,16 +24,15 @@ def send_welcome(message):
 @bot.message_handler(commands=['joke'])
 def send_welcome(message):
     bot.reply_to(message, """\
-В Англии не играют в шахматы потомучто у них нет королевы!\
+В Англии не играют в шахматы, потому что у них нет королевы!\
 """)
     
 # Handle '/info'
 @bot.message_handler(commands=['info'])
 def send_welcome(message):
     bot.reply_to(message, """\
-Я просто робот который знает всего лиш
-одну шутку про королевы но также я могу
-отпровлять информацию про жителей в Армении\
+Привет, я бот, который может выдать вам информацию о жителях Армении,
+но так же я знаю пару шуток, которые вы можете получить прописав /joke\
 """)
     
 # Handle '/admin'
